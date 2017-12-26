@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Books</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <table cellspacing="50" align="middle">
+            <thead>
+                <tr>
+                    <th><b>ID</b></th>
+                    <th><b>TITLE</b></th>
+                    <th><b>ISBN</b></th>
+                    <th><b>PUBLISHER</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="book: ${books}">
+                    <td th:text="${book.id}">123</td>
+                    <td th:text="${book.title}">Domain Driven Design</td>
+                    <td th:text="${book.isbn}">23444</td>
+                    <td th:text="${book.publisher.name}">Harper Collins</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
